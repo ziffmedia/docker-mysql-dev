@@ -1,11 +1,12 @@
-FROM mysql:5.6
+FROM mysql:5.7.12
 CMD [ \
     "mysqld", \
     "--user=root", \
     "--verbose", \
     "--skip-sync-frm", \
-    "--innodb_flush_log_at_trx_commit=0", \
+    "--skip-log-bin", \
     "--innodb-support-xa=0", \
     "--bind-address=0.0.0.0", \
     "--query-cache-type=1" \
 ]
+ENV MYSQL_ROOT_PASSWORD root
