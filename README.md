@@ -11,10 +11,3 @@ The consist of:
 
 None of these should be an issue in a single-server, low volume development environment. 
 Never run these settings where the data is important.
-
-### Verions
-- `5.6` - Pinned to `mysql:5.6` from Dockerhub. Use this one if you're deploying to Aurora in production
-- `5.7` - Pinned to `mysql:5.7` from Dockerhub. Use this for traditional MySQL RDS instances.
-
-### TODO
-- Implement ramdisk option for running tests (would require running with privileges)
